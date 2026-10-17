@@ -1,0 +1,41 @@
+{
+  "source_page": "https://abprojects.itch.io/pencil-arena",
+  "images": [
+    {
+      "file": "01-cover.png",
+      "source": "https://img.itch.zone/aW1nLzI4NjcwMDQzLnBuZw==/original/W9dMwF.png",
+      "sha256": "c42ef6ea526916c22bad84077b8af88ac1d2fbc2c477841c09c5c4ad5b2e9800",
+      "bytes": "330743"
+    },
+    {
+      "file": "02-screenshot.png",
+      "source": "https://img.itch.zone/aW1hZ2UvNDgwNjc4OS8yODY2OTczMC5wbmc=/original/QOon3K.png",
+      "sha256": "bbd4abf507855ad7451b912f86922c1bafb7cb0c96727fdca4b5c9165890b13f",
+      "bytes": "972150"
+    },
+    {
+      "file": "03-screenshot.png",
+      "source": "https://img.itch.zone/aW1hZ2UvNDgwNjc4OS8yODY2OTczMi5wbmc=/original/Sr%2FE5z.png",
+      "sha256": "2eda1e8dbce49fb392a3b1e61644849985cc20b63f23dc95e6c30b8d84bcea3e",
+      "bytes": "1145415"
+    },
+    {
+      "file": "04-screenshot.png",
+      "source": "https://img.itch.zone/aW1hZ2UvNDgwNjc4OS8yODY2OTczMS5wbmc=/original/7SoQST.png",
+      "sha256": "490777a2c8c04eb722bc7ee8889d7646153ace815f3f91e47439c9d348994064",
+      "bytes": "1168694"
+    },
+    {
+      "file": "05-screenshot.png",
+      "source": "https://img.itch.zone/aW1hZ2UvNDgwNjc4OS8yODY2OTcyOS5wbmc=/original/Dbmjfb.png",
+      "sha256": "4021cf377f20066ef08443fc29632dfe2e216a9461b0866dd03b70057d2f9df7",
+      "bytes": "2348247"
+    },
+    {
+      "file": "06-screenshot.png",
+      "source": "https://img.itch.zone/aW1hZ2UvNDgwNjc4OS8yODY2OTczNS5wbmc=/original/bV8egK.png",
+      "sha256": "a6c93ead9b4cbcc0656188ce28bb2e15b9abfe805f5aefe9c9dc0df494d2451a",
+      "bytes": "2072719"
+    }
+  ]
+}

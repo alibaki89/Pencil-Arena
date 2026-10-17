@@ -1,1 +1,51 @@
-digraph G { rankdir=TB; bgcolor="white"; pad="0.15"; nodesep="0.22"; ranksep="0.20"; node[shape=box,style="rounded,filled",color="#668397",fillcolor="#eef4f5",fontname="DejaVu Sans",fontsize=12,margin="0.20,0.13"]; edge[color="#487083",penwidth=1.5,arrowsize=0.65];n0[label="Keyboard / mouse / touch"];n1[label="Game / combat state"];n2[label="Traversal + collision"];n3[label="Enemy behavior + navigation"];n4[label="Camera + muzzle validation"];n5[label="Adaptive DPR rendering"];n6[label="WebGL + HUD"];n0->n1;n1->n2;n2->n3;n3->n4;n4->n5;n5->n6;}
+digraph G {
+  rankdir=LR;
+  graph [bgcolor="white", pad="0.18", nodesep="0.28", ranksep="0.5"];
+  node [shape=box, style="rounded,filled", color="#577387", fillcolor="#eef4f7", fontname="DejaVu Sans", fontsize=11, margin="0.18,0.12"];
+  edge [color="#4c7085", penwidth=1.4, arrowsize=0.7, fontname="DejaVu Sans", fontsize=10];
+
+  subgraph cluster_ui {
+    label="Input and interface"; color="#bfd3de"; style="rounded";
+    input [label="Input
+keyboard · mouse · touch"];
+    ui [label="Menus / HUD / settings"];
+  }
+
+  subgraph cluster_control {
+    label="Game loop"; color="#bfd3de"; style="rounded";
+    state [label="Game state controller
+intro, mode, score, waves"];
+    loop [label="Frame loop
+active play + idle render governor"];
+  }
+
+  subgraph cluster_gameplay {
+    label="Gameplay systems"; color="#bfd3de"; style="rounded";
+    player [label="Player movement and aiming"];
+    combat [label="Weapons / combat resolution"];
+    enemy [label="Enemy spawning + behaviour"];
+    world [label="Arena, pickups, collisions"];
+  }
+
+  subgraph cluster_render {
+    label="Rendering"; color="#bfd3de"; style="rounded";
+    camera [label="Camera solving + follow logic"];
+    render [label="WebGL renderer
+adaptive resolution / quality"];
+  }
+
+  input -> state;
+  ui -> state [label="options / mode"];
+  state -> loop;
+  loop -> player;
+  loop -> enemy;
+  player -> combat;
+  enemy -> combat;
+  world -> combat;
+  player -> camera;
+  enemy -> world;
+  combat -> world;
+  world -> camera;
+  camera -> render;
+  state -> ui [label="score / overlays"];
+}
